@@ -1,4 +1,4 @@
-package CodingInterviews.Q04_ReplaceBlank;
+package CodingInterviews.Q04;
 
 /*
  * 替换空格

@@ -1,4 +1,4 @@
-package CodingInterviews.Q03_FindInPartiallySortedMatrix;
+package CodingInterviews.Q03;
 
 /*
  * 二维数组中的查找
