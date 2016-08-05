@@ -1,6 +1,6 @@
 package CodingInterviews.Q24;
 
-public class Solution1 {
+public class SolutionBetter {
 	public boolean VerifySquenceOfBST(int[] sequence) {
 		if (sequence.length == 0)
 			return false;
