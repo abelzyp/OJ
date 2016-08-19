@@ -2,8 +2,8 @@ package others;
 
 public class Tests {
 	public static void main(String[] args) {
-		for(int i=0;i<=10;i++)
-			{Integer k=new Integer(i);}
-		System.out.println("hello");
+		int c=0;
+		if((c++)>0)System.out.println("1");
+		else System.out.println("2");
 	}
 }
