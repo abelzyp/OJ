@@ -1,4 +1,4 @@
-package others;
+package others.PalindromeString;
 
 import java.util.Scanner;
 
@@ -9,21 +9,22 @@ public class ReverseString {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String x;
-		while(sc.hasNext()){
+		while (sc.hasNext()) {
 			x = sc.nextLine();
 			System.out.println(isRevStr(x));
 		}
 	}
 
 	private static boolean isRevStr(String x) {
-		if(x==null||x.equals("")) return true;
+		if (x == null || x.equals(""))
+			return true;
 		StringBuilder sb = new StringBuilder(x);
-		for(int i=0;i<sb.length();i++){
+		for (int i = 0; i < sb.length(); i++) {
 			sb.deleteCharAt(i);
 			String temp = sb.toString();
-			if(sb.reverse().toString().equals(temp)){
+			if (sb.reverse().toString().equals(temp)) {
 				return true;
-			}else {
+			} else {
 				sb = new StringBuilder(x);
 				continue;
 			}

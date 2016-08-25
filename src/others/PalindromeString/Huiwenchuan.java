@@ -1,4 +1,4 @@
-package others;
+package others.PalindromeString;
 
 import java.util.Arrays;
 import java.util.Scanner;
