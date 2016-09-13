@@ -3,18 +3,17 @@ package WrittenExam.NetEase.AnHeiDeZiFuChuan;
 import java.util.Scanner;
 
 /*
- * 此题有问题
+ * 递推公式:f(n)=f(n-1)*2+f(n-2)
  */
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		if (n < 1 || n > 30)
-			return;
-		if (n == 1 || n == 2) {
-			System.out.println((int) Math.pow(3, n));
-			return;
-		}
-		System.out.println((int) (Math.pow(3, n) - 6 * Math.pow(3, n - 3)));
+		long[] dp = new long[n];
+		dp[0] = 3;
+		dp[1] = 9;
+		for (int i = 2; i < dp.length; i++)
+			dp[i] = dp[i - 1] * 2 + dp[i - 2];
+		System.out.println(dp[n - 1]);
 	}
 }
