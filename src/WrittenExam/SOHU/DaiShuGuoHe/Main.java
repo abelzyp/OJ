@@ -4,27 +4,42 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-		int[] arr = new int[N];
-		for (int i = 0; i < N; i++) {
-			arr[i] = sc.nextInt();
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+
+		while (in.hasNext()) {
+			int[] nums = new int[n];
+			for (int i = 0; i < n; i++) {
+				nums[i] = in.nextInt();
+			}
+
+			System.out.println(jumpCount(nums));
+		}
+	}
+
+	public static int jumpCount(int[] nums) {
+		if (nums == null || nums.length == 0)
+			return -1;
+
+		int jumpCount = 0;
+
+		int lastJump = 0;
+		int jump = 0;
+		for (int position = 0; position <= jump && position < nums.length; position++) {
+			if (position == jump && position == nums.length - 1) {
+				jumpCount++;
+			}
+
+			if (position > lastJump) {
+				jumpCount++;
+				lastJump = jump;
+			}
+			jump = Math.max(jump, nums[position] + position);
 		}
 
-		int step = arr[0];
-		if (step == 0) {
-			System.out.println(-1);
-			return;
-		}
-		int res = 1;
-		for (int i = step; i < N; i += step) {
-			if (arr[i] == 0) {
-				System.out.println(-1);
-				return;
-			}
-			res++;
-			step = arr[i];
-		}
-		System.out.println(res);
+		if (jump < nums.length - 1)
+			return -1;
+
+		return jumpCount;
 	}
 }
