@@ -1,7 +1,7 @@
 package BeautifulCode;
 
 /*
- * 我能让我美丽的代码，以这个白色的笑脸开始么？
+ * 能让我美丽的代码，以这个白色的笑脸开始么？
  */
 public class Code1 {
 	public static void main(String[] args) {

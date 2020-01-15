@@ -1,4 +1,4 @@
-package others.PalindromeString;
+package WrittenExam.MeiTuan.PalindromeString;
 
 import java.util.Scanner;
 

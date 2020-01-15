@@ -1,4 +1,4 @@
-package others.YangHuiSanJiao;
+package WrittenExam.MeiTuan.YangHuiSanJiao;
 
 public class YangHuiSanJiao {
 	public static void main(String[] args) {

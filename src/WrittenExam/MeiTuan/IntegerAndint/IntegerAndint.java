@@ -1,4 +1,4 @@
-package others.IntegerAndint;
+package WrittenExam.MeiTuan.IntegerAndint;
 
 /*
  * 

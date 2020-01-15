@@ -1,4 +1,4 @@
-package others.IntegerAndint;
+package WrittenExam.MeiTuan.IntegerAndint;
 
 public class EqualsDemo {
 	public static void main(String[] args) {

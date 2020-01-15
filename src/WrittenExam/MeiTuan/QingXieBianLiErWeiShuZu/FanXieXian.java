@@ -1,4 +1,4 @@
-package others.QingXieBianLiErWeiShuZu;
+package WrittenExam.MeiTuan.QingXieBianLiErWeiShuZu;
 
 public class FanXieXian {
 	public static String BianLi(int[][] arr, int n) {
