@@ -1,15 +1,15 @@
-package LeetCode.TwoSum;
+package LeetCode.Q0001_TwoSum;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 /**
  * Given an array of integers, return indices of the two numbers such that they
  * add up to a specific target.
- * 
+ *
  * You may assume that each input would have exactly one solution.
- * 
+ *
  * @author zhangzhang
- * 
+ *
  * 思路：
  * 1、定义一个数组和一个hashtable
  * 2、循环遍历这个数组，每次都判断当前数组索引位置的值在不在hashtable里：
@@ -18,21 +18,17 @@ import java.util.Hashtable;
  * 3、返回数组
  */
 public class Solution {
-	public int[] twoSum(int[] nums, int target) {
-		int[] a = new int[2];
-		Hashtable<Integer, Integer> numbers = new Hashtable<Integer, Integer>();
-		for (int i = 0; i < nums.length; i++) {
-			Integer n = numbers.get(nums[i]);
-			if (n == null) {
-				numbers.put(nums[i], i);
-			}
-			n = numbers.get(target - nums[i]);
-			if (n != null && n < i) {
-				a[0] = n;
-				a[1] = i;
-				return a;
-			}
-		}
-		return a;
-	}
+    public int[] twoSum(int[] nums, int target) {
+        int[] index = new int[2];
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.containsKey(nums[i])) {
+                index[0] = i;
+                index[1] = hashMap.get(nums[i]);
+                return index;
+            }
+            hashMap.put(target - nums[i], i);
+        }
+        return index;
+    }
 }
