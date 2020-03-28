@@ -1,4 +1,4 @@
-package WrittenExam.Huawei;
+package WrittenExam.Huawei.PasswordCheck;
 
 /**
  * 密码强度检查
