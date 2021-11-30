@@ -9,6 +9,8 @@ package WrittenExam.Huawei.MaxArray;
  * - 奇数个数的负数 -> 取最小的负数
  * - 偶数个数的负数 -> 取正整数最小的值
  *
+ * 看不懂题可以参考这个思路：https://baijiahao.baidu.com/s?id=1648846561371324815
+ *
  * @author Zhang Yupeng
  * @since 2021/12/1
  */
