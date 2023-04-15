@@ -2,7 +2,7 @@ package BeautifulCode;
 
 import java.util.Arrays;
 
-/*
+/**
  * 你听过lambda表达式么？
  * 对的，就是那个，很新，JDK8
  */
